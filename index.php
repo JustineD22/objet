@@ -1,6 +1,9 @@
 <?php
 require_once './classes/voiture.class.php';
 require_once './classes/electrique.class.php';
+require_once './classes/testStatique.class.php';
+
+Test::toto();
 
 //$voiture1 = new Voiture("Rose", "Peugeot", "207", 1500);
 //echo $voiture1->couleur;
