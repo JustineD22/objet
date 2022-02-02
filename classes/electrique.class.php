@@ -1,6 +1,8 @@
 <?php
 
-class Electrique extends Voiture {
-    protected string $typemoteur = "electrique";
-    protected int $chargemax = 5000;
+final class Electrique extends Voiture
+{
+    protected string $typeMoteur = "électrique";
+    protected int $chargeMax = 5000;
+
 }
