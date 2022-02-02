@@ -1,13 +1,15 @@
 <?php
 
-abstract class Voiture
+class Voiture
 {
     
-    protected string $marque;
-    protected string $modele;
-    protected string $couleur;
-    protected int $masse;
-    protected int $nombreRoues = 4;
+    public string $marque;
+    public string $modele;
+    public string $couleur;
+    public int $masse;
+    public int $nombreRoues = 4;
+    public float $vitesse = 0;
+
 
     public function __construct(string $couleur, string $marque, string $modele, int $masse)
     {
@@ -52,6 +54,22 @@ abstract class Voiture
     {
         $this->masse = $masse;
     }
+
+    public function getVitesse()
+    {
+        return $this->vitesse;
+    }
+    
+    public function setMasse(float $vitesse)
+    {
+        $this->vitesse = $vitesse;
+    }
+
+    public function getEC() : float 
+    {
+        return 0.5 * $this->masse * ($this->vitesse ** 2);
+    }
+
     public function __destruct()
     {
         echo "<h1>Destruction</h1>";
